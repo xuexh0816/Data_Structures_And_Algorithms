@@ -23,6 +23,7 @@ object Calculator {
 			//依次得到expression的每个字符
 			ch = expressionString.substring(index, index + 1).charAt(0)
 			//判断ch是什么做相应处理
+			
 			if(stackOpr.isOper(ch)){
 				if(stackOpr.isEmpty){
 					stackOpr.push(ch)
@@ -38,3 +39,12 @@ object Calculator {
 	}
 	
 }
+
+/**
+ * 数字入数字栈 符号入符号栈
+ * 如果符号栈为空 直接入栈
+ * 如果不为空
+ *   判断如果当前操作符优先级 <= 栈中 操作符优先级 从数栈中取出两个数 从符号栈中取出一个运算符 将得到的结果入数栈 将当前操作符入符号栈
+ *   如果当前操作符优先级 >= 栈中操作符优先级 直接入栈
+ * 扫描完毕 依次取出栈中元素计算 最后栈中数字即为结果
+ */
