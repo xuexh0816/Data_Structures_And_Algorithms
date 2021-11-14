@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Data_Structures_And_Algorithms" />
+        <module name="dsaa" />
         <module name="LeetCode" />
       </profile>
     </annotationProcessing>
